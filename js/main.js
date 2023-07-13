@@ -3,7 +3,7 @@
     "use strict";
 
 var currentURL = window.location.href;
-var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/'));
+var baseURL = currentURL.split('/').slice(0, -1).join('/');
 window.history.replaceState({}, document.title, baseURL);
 
 	
