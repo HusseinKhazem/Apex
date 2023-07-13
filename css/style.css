@@ -7,6 +7,21 @@
 }
 
 
+/* BREAK LINES <BR/> ONLY ON DESKTOP NO MOBILE 
+
+/* Styles for desktop devices */
+.desktop-line-break {
+  display: none; /* Hide the line break by default on mobile */
+}
+
+@media (min-width: 768px) {
+  /* Styles for devices with a minimum width of 768px (desktop) */
+  .desktop-line-break {
+    display: block; /* Show the line break on desktop */
+  }
+}
+
+
 
   /* Shared styles for both mobile and desktop */
     .image {
