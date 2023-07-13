@@ -17,7 +17,7 @@
     /* Styles specific to mobile devices */
     @media (max-width: 767px) {
       .image {
-       height: 1000px
+       height: 500px
       }
     }
 
