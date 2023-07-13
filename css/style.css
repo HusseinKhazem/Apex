@@ -17,14 +17,14 @@
     /* Styles specific to mobile devices */
     @media (max-width: 767px) {
       .image {
-        height: 70%;
+        height: 600px;
       }
     }
 
     /* Styles specific to desktop */
     @media (min-width: 768px) {
       .image {
-        height: 700px
+        height: 700px;
       }
     }
 
