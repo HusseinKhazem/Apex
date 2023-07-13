@@ -121,6 +121,70 @@
             }
         }
     });
+	
+	
+
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('contact-form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+
+// Get FORM data
+
+var templateParams = {
+    from_name : document.getElementById("name").value,
+    email_id : document.getElementById("email").value,
+    message : document.getElementById("message").value
+  };
+
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_52p0tht';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+
+
+
+
+
+
+// Function to send email
+function sendEmail(event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Get form data
+  var templateParams = {
+    from_name : document.getElementById("name").value,
+    email_id : document.getElementById("email").value,
+    message : document.getElementById("message").value
+  };
+
+  // Send email using EmailJS
+  emailjs.send("service_xzwa6ev", "template_52p0tht", "templateParams")
+    .then(function(response) {
+      console.log("Email sent successfully!");
+      document.getElementById("contact-form").reset(); // Reset the form
+    }, function(error) {
+      console.log("Failed to send email. Error:", error);
+    });
+}
+
+// Attach event listener to the form submit event
+document.getElementById("contact-form").addEventListener("submit", sendEmail);
     
 })(jQuery);
 
