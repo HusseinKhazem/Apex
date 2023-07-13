@@ -5,6 +5,35 @@
     --light: #EEF9FF;
     --dark: #091E3E;
 }
+
+
+
+  /* Shared styles for both mobile and desktop */
+    .image {
+      width: 100%;
+     
+    }
+
+    /* Styles specific to mobile devices */
+    @media (max-width: 767px) {
+      .image {
+        height: 50%
+      }
+    }
+
+    /* Styles specific to desktop */
+    @media (min-width: 768px) {
+      .image {
+        /* Desktop-specific styles */
+        /* Add your desired styles here */
+      }
+    }
+
+
+
+
+
+
 /** DISABLE SELECTION OF ELEMENTS **/
 
 
