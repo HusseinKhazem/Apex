@@ -1,6 +1,12 @@
+
 (function ($) {
     "use strict";
 
+var currentURL = window.location.href;
+var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/'));
+window.history.replaceState({}, document.title, baseURL);
+
+	
     // Spinner
     var spinner = function () {
         setTimeout(function () {
