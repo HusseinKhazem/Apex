@@ -1,12 +1,8 @@
-
 (function ($) {
     "use strict";
 
-var currentURL = window.location.href;
-var baseURL = currentURL.split('/').slice(0, -1).join('/');
-window.history.replaceState({}, document.title, baseURL);
 
-	
+ 
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -176,7 +172,9 @@ function sendEmail(event) {
   var templateParams = {
     from_name : document.getElementById("name").value,
     email_id : document.getElementById("email").value,
-    message : document.getElementById("message").value
+    phone : document.getElementById("phone").value,
+	message : document.getElementById("message").value
+	
   };
 
   // Send email using EmailJS
@@ -191,6 +189,21 @@ function sendEmail(event) {
 
 // Attach event listener to the form submit event
 document.getElementById("contact-form").addEventListener("submit", sendEmail);
+
+
+
+
+//PREVENT ADDING OTHER THAN DIGITS INSIDE PHONE NUMBER TEXT BOX
+function validatePhoneNumber(input) {
+  var phoneNumber = input.value.replace(/\D/g, ''); // Remove non-digit characters from the input
+
+  if (phoneNumber !== input.value) {
+    alert('Please enter only digits for the phone number.');
+    input.value = phoneNumber; // Update the input value to remove non-digit characters
+  }
+}
+
+
     
 })(jQuery);
 
