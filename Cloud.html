@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -344,6 +345,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+ <script>
+    if (location.pathname.endsWith(".html")) {
+      var newUrl = location.href.replace(location.pathname, "/");
+      window.history.replaceState({}, document.title, newUrl);
+    }
+  </script>
 </body>
 
 </html>
