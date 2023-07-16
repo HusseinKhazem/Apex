@@ -203,6 +203,11 @@ function validatePhoneNumber(input) {
   }
 }
 
+//REMOVE PAGE NAMES FROM URL EXAMPLE: WWW.APEXITSOLUTIONS.TECH/INDEX.HTML -- THIS BELOW CODE HIDES THE PAGE NAME FROM THE URL>> WWW>.APEXITSOLUTIONS.TECH
+    if (location.pathname.endsWith(".html")) {
+      var newUrl = location.href.replace(location.pathname, "/");
+      window.history.replaceState({}, document.title, newUrl);
+    }
 
     
 })(jQuery);
