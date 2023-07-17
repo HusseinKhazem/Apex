@@ -657,7 +657,14 @@
 				
 			
 		</script>
-	
+	 <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const image = document.getElementById('my-image');
+      image.addEventListener('dragstart', (event) => {
+        event.preventDefault();
+      });
+    });
+  </script>
 	
 </body>
 
