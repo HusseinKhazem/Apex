@@ -6,6 +6,9 @@
     --dark: #091E3E;
 }
 
+body {
+	overflow: hidden;
+}
 
 /* BREAK LINES <BR/> ONLY ON DESKTOP NO MOBILE 
 
