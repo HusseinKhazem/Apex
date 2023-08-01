@@ -336,12 +336,10 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-	//WHTP FUNCTION
-
-        // Get all elements with the class 'whatsapp-button'
+<script>
         var buttons = document.getElementsByClassName('whatsapp-button');
         
-        // Attach the click event listener to each button
+       
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener('click', function() {
                 var phoneNumber = this.getAttribute('data-phone');
@@ -352,7 +350,8 @@
             });
         }
 
-	
+	</script>
+        
 
 </body>
 
