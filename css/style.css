@@ -643,14 +643,3 @@ h6,
     }
 }
 
- @media (max-width: 767px) { 
- 
- 
-        /* TO CENTER WHTP AND PHONE BUTTON ONLY ON PHONES */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
