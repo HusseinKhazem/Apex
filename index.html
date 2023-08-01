@@ -501,10 +501,10 @@
 
 											// Replace 'YOUR_MESSAGE' with the default message you want to send.
 													var defaultText = 'Hello I would like to request a quote.';
-																															document.getElementById('whatsappButton').addEventListener('click', function() {
-																															var message = encodeURIComponent(defaultText);
-																															var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
-																															window.location.href = whatsappURL;
+													document.getElementById('whatsappButton').addEventListener('click', function() {
+									    		         	var message = encodeURIComponent(defaultText);
+													var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+													window.location.href = whatsappURL;
 									});
 							</script>					
                         </button>					
