@@ -664,7 +664,23 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 	
-	
+	<!-- WHATSAPP JAVASCRIPT -->
+
+	<script>
+        var buttons = document.getElementsByClassName('whatsapp-button');
+        
+       
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                var phoneNumber = this.getAttribute('data-phone');
+                var defaultText = this.getAttribute('data-message');
+                var message = encodeURIComponent(defaultText);
+                var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+                window.open(whatsappURL, '_blank');
+            });
+        }
+
+	</script>
 	
 	<!-- EMAIL JAVASCRIPT EMAILJS -->
 	
