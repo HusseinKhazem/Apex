@@ -162,16 +162,19 @@ var templateParams = {
 	
 //WHTP FUNCTION
 
-// Replace 'PHONE_NUMBER' with the phone number you want to send the message to (including the country code).
-var phoneNumber = '+96179140905';
-
-// Replace 'YOUR_MESSAGE' with the default message you want to send.
-var defaultText = 'Hello I would like to request a quote.';
-document.getElementById('whatsappButton').addEventListener('click', function() {
-var message = encodeURIComponent(defaultText);
-var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
-window.location.href = whatsappURL;
-});
+        // Get all elements with the class 'whatsapp-button'
+        var buttons = document.getElementsByClassName('whatsapp-button');
+        
+        // Attach the click event listener to each button
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                var phoneNumber = this.getAttribute('data-phone');
+                var defaultText = this.getAttribute('data-message');
+                var message = encodeURIComponent(defaultText);
+                var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+                window.open(whatsappURL, '_blank');
+            });
+        }
 
 
 
