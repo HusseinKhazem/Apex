@@ -455,13 +455,58 @@
                     </div>
                     <p class="mb-4">"Your unique requirements deserve personalized attention. Let us provide you with a free, comprehensive quote that aligns perfectly with your needs. Contact us now and embark on a journey of exceptional service and unparalleled solutions."</p>
                     <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                         <button id="call-button" data-phone-number="+96170471974" class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
+                        </button>
+                     
+					 
+
+							
+								<!-- Replace "YOUR_PHONE_NUMBER" with the actual phone number you want to dial -->
+								
+
+								<script>
+									// Get the "call-button" element by its id
+									const callButton = document.getElementById("call-button");
+
+									// Add a click event listener to the "call-button" element
+									callButton.addEventListener("click", function() {
+										// Get the phone number from the "data-phone-number" attribute
+										const phoneNumber = this.getAttribute("data-phone-number");
+
+										// Check if the phone number is available
+										if (phoneNumber) {
+											// Use the tel: URI scheme to initiate the phone call
+											window.location.href = 'tel:' + phoneNumber;
+										}
+									});
+								</script>
+					 
+					 
+
+
+					
+						 <button id="whatsappButton" class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px; margin-left: 20px;">
+                            <i class="bi bi-whatsapp text-white"></i>							
+							 <script>
+											// Replace 'PHONE_NUMBER' with the phone number you want to send the message to (including the country code).
+													var phoneNumber = '+96179140905';
+
+											// Replace 'YOUR_MESSAGE' with the default message you want to send.
+													var defaultText = 'Hello I would like to request a quote.';
+																															document.getElementById('whatsappButton').addEventListener('click', function() {
+																															var message = encodeURIComponent(defaultText);
+																															var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+																															window.location.href = whatsappURL;
+									});
+							</script>					
+                        </button>					
+                        <div class="ps-4">		
+						   <h5 class="mb-2">Call Us For a Quote</h5>
+                            <h5 class="mb-2"> Or Message Us On Whatsapp</h5>
+                            
                         </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+961 70 471 974</h4>
-                        </div>
+					 
                     </div>
                 </div>
 				
