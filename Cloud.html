@@ -336,6 +336,24 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+	//WHTP FUNCTION
+
+        // Get all elements with the class 'whatsapp-button'
+        var buttons = document.getElementsByClassName('whatsapp-button');
+        
+        // Attach the click event listener to each button
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                var phoneNumber = this.getAttribute('data-phone');
+                var defaultText = this.getAttribute('data-message');
+                var message = encodeURIComponent(defaultText);
+                var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+                window.open(whatsappURL, '_blank');
+            });
+        }
+
+	
+
 </body>
 
 </html>
