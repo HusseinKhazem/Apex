@@ -494,20 +494,23 @@
 
 					
 						 <button id="whatsappButton" class="btn btn-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px; margin-left: 20px;">
-                            <i class="bi bi-whatsapp text-white"></i>							
+                            <i class="bi bi-whatsapp text-white"></i>		
+
+							   </button>	
 							 <script>
 											// Replace 'PHONE_NUMBER' with the phone number you want to send the message to (including the country code).
 													var phoneNumber = '+96170471974';
 
 											// Replace 'YOUR_MESSAGE' with the default message you want to send.
 													var defaultText = 'Hello I would like to request a quote.';
+								 
 													document.getElementById('whatsappButton').addEventListener('click', function() {
 									    		         	var message = encodeURIComponent(defaultText);
 													var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
 													window.location.href = whatsappURL;
 									});
 							</script>					
-                        </button>					
+                       					
                      
 					 
                     </div>
