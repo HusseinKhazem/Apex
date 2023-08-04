@@ -626,6 +626,11 @@ h6,
     background-size: 100% 100%;
 }
 
+.bg-header-procurement {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/pepperpro.jpg) center center no-repeat;
+    background-size: 100% 100%;
+}
+
 
 
 
