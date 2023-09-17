@@ -40,6 +40,31 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	
+	
+	<style>
+	body {
+    background-image: url('img/mountain3.jpg'); /* Path to your image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	}
+	
+	@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Use 'contain' to fit the entire image within the viewport */
+    }
+}
+	
+	
+
+	.content-container {
+    position: relative;
+    background-color: white; /* Set your desired background color */
+    z-index: 1; /* Place the content container above the image */
+}
+
+	</style>
 </head>
 
 
@@ -108,41 +133,38 @@
         </nav>
 
   
-	
- <div class="carousel-item active" style="height: auto">
-                    <img class="image" src="img/mountain3.jpg" alt="Mountain" >
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" >
-					</div>
-					</div>
-					
+	  
+
     
 
 
-	<p class="mobile-line-break"> <br /> <br /> </p>
+	
 
 
 		
 		 
 		
 		                                                    <!-- BREAKLINES ONLY FOR DESKTOP DEVICES -->
-<p class="mobile-line-break"><br /> <br /><br /><br />  </p> 
-					<div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 1000px;">
+
+					<div class="text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 1000px;">
 					
 				<div class="no-select">
 					 <div class="  wow zoomIn" data-wow-delay="0.9s" >
-						<div class="h-100">
-							<img class=" w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/AL.png" style="opacity: 0.3; ">
-						</div>
+						
+						
 					</div>	
 				</div>	
-						<p class="mobile-line-break"><br /> <br /><br /><br />  </p> 
-					<p class="mb-4 text-center" style="max-width: 1000px; " >At our core, we believe that technology should be simple, effective, and easy to use. That's why we offer a wide range of IT services that are tailored to meet the unique needs of each client. Whether you need help with network security, data backup and recovery, cloud computing, or any other IT-related service, we have the expertise and experience to get the job done right.</p>
-				
-					</div>		
-                     
-        </div>
-	
-	
+					
+					<div class="desktop-line-break">	<br/><br/><br/><br/><br/><br/><br/><br/> </div>
+				<div class="h-100">
+							<img class=" w-100 h-100 rounded wow zoomIn" data-wow-delay="0.3s" src="img/AL.png" style="opacity: 0.5; ">
+						</div>
+					</div>		<div class="content-container">
+                      <br /><br /><br />
+       <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 1000px;">
+						<p class="mb-4 text-center" style="max-width: 1000px; " >At our core, we believe that technology should be simple, effective, and easy to use. That's why we offer a wide range of IT services that are tailored to meet the unique needs of each client. Whether you need help with network security, data backup and recovery, cloud computing, or any other IT-related service, we have the expertise and experience to get the job done right.</p>
+
+	</div>
 	
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -667,6 +689,7 @@
             </div>
         </div>
     </div>
+	</div>
     <!-- Footer End -->
 
 
