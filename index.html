@@ -101,6 +101,7 @@
 
 
     <!-- Navbar & Carousel Start -->
+	<div class="content-container"> 
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
 		
@@ -109,7 +110,7 @@
                 <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Apex IT Solution</h1>
             </a>
 			-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button id="NAV" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -132,7 +133,7 @@
              
         </nav>
 
-  
+  </div></div></div>
 	  
 
     
@@ -157,7 +158,7 @@
 					
 					<div class="desktop-line-break">	<br/><br/><br/><br/><br/><br/><br/><br/> </div>
 				<div class="h-100">
-							<img class=" w-100 h-100 rounded wow zoomIn" data-wow-delay="0.3s" src="img/AL.png" style="opacity: 0.5; ">
+							<img id="LOGO" class=" w-100 h-100 rounded wow zoomIn" data-wow-delay="0.3s" src="img/AL.png" style="opacity: 0.5; ">
 						</div>
 					</div>		<div class="content-container">
                       <br /><br /><br />
@@ -752,6 +753,30 @@
     });
   </script>
 	
+	
+	<script>
+const imageToToggle = document.getElementById('LOGO');
+const toggleButton = document.getElementById('NAV');
+
+// Variable to keep track of the image's visibility
+let isImageVisible = true;
+
+// Add a click event listener to the button
+toggleButton.addEventListener('click', function() {
+    // Toggle the image's visibility
+    if (isImageVisible) {
+        imageToToggle.style.display = 'none';
+       
+    } else {
+        imageToToggle.style.display = 'block'; // or 'inline' depending on your image type
+        
+    }
+
+    // Update the visibility status
+    isImageVisible = !isImageVisible;
+});	
+	
+	</script>
 </body>
 
 </html>
